@@ -1,0 +1,7 @@
+{
+  "name": "LeafLens - Gardening Assistant",
+  "description": "Identify plants instantly and get detailed care instructions, AI-powered chat support, and visualizations.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
