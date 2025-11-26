@@ -20,13 +20,13 @@ const PlantCard: React.FC<PlantCardProps> = ({ data }) => {
       <div className="bg-gradient-to-br from-leaf-50 to-sky-50 p-6 md:p-10 border-b border-leaf-100">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
           <div>
-            <h2 className="text-4xl font-display font-bold text-gray-900 tracking-tight">{data.name}</h2>
-            <p className="text-xl text-leaf-600 italic font-medium mt-2">{data.scientificName}</p>
-            <p className="mt-6 text-gray-600 leading-relaxed max-w-2xl text-lg">{data.description}</p>
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 tracking-tight">{data.name}</h2>
+            <p className="text-lg md:text-xl text-leaf-600 italic font-medium mt-2">{data.scientificName}</p>
+            <p className="mt-6 text-gray-600 leading-relaxed max-w-2xl text-base md:text-lg">{data.description}</p>
           </div>
           
           {/* Vital Stats Chart */}
-          <div className="w-full md:w-64 h-48 flex-shrink-0 bg-white/80 backdrop-blur-sm rounded-2xl shadow-sm p-4 border border-white">
+          <div className="w-full md:w-64 h-48 flex-shrink-0 bg-white/80 backdrop-blur-sm rounded-2xl shadow-sm p-4 border border-white mx-auto md:mx-0">
              <ResponsiveContainer width="100%" height="100%">
               <RadialBarChart cx="50%" cy="50%" innerRadius="20%" outerRadius="100%" barSize={10} data={chartData}>
                 <RadialBar

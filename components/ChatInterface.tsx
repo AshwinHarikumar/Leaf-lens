@@ -78,7 +78,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({ chatSession, initialMessa
   };
 
   return (
-    <div className="bg-white rounded-3xl shadow-xl border border-white/50 flex flex-col h-[600px] md:h-[700px] overflow-hidden">
+    <div className="bg-white rounded-3xl shadow-xl border border-white/50 flex flex-col h-[500px] md:h-[700px] overflow-hidden">
       <div className="p-4 border-b border-gray-100 bg-gradient-to-r from-leaf-50 to-bloom-50">
         <h3 className="font-display font-bold text-gray-800 flex items-center gap-2">
           <div className="p-1.5 bg-white rounded-lg shadow-sm">

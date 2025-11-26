@@ -75,24 +75,24 @@ const App: React.FC = () => {
               <div className="absolute top-0 left-1/2 -translate-x-1/2 w-64 h-64 bg-bloom-300/20 rounded-full blur-3xl -z-10"></div>
               <div className="absolute bottom-0 left-1/3 w-72 h-72 bg-sun-300/20 rounded-full blur-3xl -z-10"></div>
               
-              <h1 className="text-5xl md:text-7xl font-display font-extrabold text-gray-900 mb-6 leading-tight">
+              <h1 className="text-4xl md:text-7xl font-display font-extrabold text-gray-900 mb-6 leading-tight">
                 Your Personal <br/>
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-leaf-500 via-leaf-600 to-bloom-500">AI Botanist</span>
               </h1>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto font-medium leading-relaxed">
+              <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto font-medium leading-relaxed">
                 Instantly identify plants, diagnose issues, and get tailored care advice powered by Gemini 2.0.
               </p>
             </div>
             <ImageUpload onImageSelected={handleImageSelected} />
             
             {/* Feature Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-24">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mt-16 md:mt-24">
               {[
                 { title: "Instant ID", desc: "99.9% accuracy in plant identification.", color: "bg-leaf-50 border-leaf-100 text-leaf-700" },
                 { title: "Care Guides", desc: "Water, light, and soil requirements customized for you.", color: "bg-sun-50 border-sun-100 text-sun-700" },
                 { title: "Expert Chat", desc: "Ask follow-up questions to our AI expert.", color: "bg-bloom-50 border-bloom-100 text-bloom-700" }
               ].map((feature, i) => (
-                <div key={i} className={`p-8 rounded-3xl border-2 ${feature.color} hover:-translate-y-1 transition-transform duration-300 shadow-sm`}>
+                <div key={i} className={`p-6 md:p-8 rounded-3xl border-2 ${feature.color} hover:-translate-y-1 transition-transform duration-300 shadow-sm`}>
                   <h3 className="font-display font-bold text-xl mb-3">{feature.title}</h3>
                   <p className="opacity-80 font-medium">{feature.desc}</p>
                 </div>
@@ -132,8 +132,8 @@ const App: React.FC = () => {
                 />
               </div>
               
-              {/* Sticky Chat on Desktop */}
-              <div className="sticky top-24">
+              {/* Sticky Chat on Desktop, normal flow on mobile */}
+              <div className="lg:sticky lg:top-24">
                  <ChatInterface 
                     chatSession={chatSession} 
                     initialMessage={`I've identified this as ${plantData.name}. What would you like to know about it?`} 
