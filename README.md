@@ -57,7 +57,7 @@ LeafLens is a modern, AI-powered gardening assistant that helps you identify pla
 
 | Home Page | Analysis Result |
 |-----------|----------------|
-| ![Home Placeholder](public\home.png) | ![Result Placeholder](public\result.png) |
+| ![Home Placeholder](publico/home.png) | ![Result Placeholder](public/result.png) |
 
 ## 📄 License
 
