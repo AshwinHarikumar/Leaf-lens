@@ -13,7 +13,7 @@ export const analyzePlantImage = async (base64Image: string): Promise<PlantData>
     const cleanBase64 = base64Image.split(',')[1] || base64Image;
 
     const response = await ai.models.generateContent({
-      model: 'gemini-3-pro-preview',
+      model: 'gemini-2.5-flash',
       contents: {
         parts: [
           {
@@ -23,13 +23,12 @@ export const analyzePlantImage = async (base64Image: string): Promise<PlantData>
             }
           },
           {
-            text: "Analyze this image. Identify the plant and provide detailed care instructions, scientific details, and rating metrics."
+            text: "Analyze this image. Identify the plant and provide detailed care instructions, scientific details, and rating metrics. Return the result as a valid JSON object matching this structure: { name, scientificName, description, care: { light, water, soil, temperature, fertilizer }, difficulty (1-10), sunlightNeeds (1-10), waterNeeds (1-10), toxicity, funFact }."
           }
         ]
       },
       config: {
         responseMimeType: "application/json",
-        responseSchema: PLANT_RESPONSE_SCHEMA,
       }
     });
 
@@ -62,7 +61,7 @@ export const createChatSession = (plantContext: PlantData) => {
   `;
 
   return ai.chats.create({
-    model: 'gemini-3-pro-preview',
+    model: 'gemini-2.5-flash',
     config: {
       systemInstruction: systemInstruction,
     }
