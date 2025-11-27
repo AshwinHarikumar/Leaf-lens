@@ -4,6 +4,8 @@
 
 LeafLens is a modern, AI-powered gardening assistant that helps you identify plants, understand their care requirements, and diagnose health issues instantly. Powered by Google's Gemini 2.0 Flash model.
 
+**🔗 Live Demo:** [Lens-Leaf](https://lens-leaf.vercel.app)
+
 ## ✨ Features
 
 - **📸 Instant Identification**: Upload or drag & drop a plant image to identify it with 99.9% accuracy.
