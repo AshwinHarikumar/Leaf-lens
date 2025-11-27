@@ -28,14 +28,23 @@ const PlantCard: React.FC<PlantCardProps> = ({ data }) => {
           {/* Vital Stats Chart */}
           <div className="w-full md:w-64 h-48 flex-shrink-0 bg-white/80 backdrop-blur-sm rounded-2xl shadow-sm p-4 border border-white mx-auto md:mx-0">
              <ResponsiveContainer width="100%" height="100%">
-              <RadialBarChart cx="50%" cy="50%" innerRadius="20%" outerRadius="100%" barSize={10} data={chartData}>
+              <RadialBarChart cx="35%" cy="50%" innerRadius="30%" outerRadius="100%" barSize={12} data={chartData}>
                 <RadialBar
-                  label={{ position: 'insideStart', fill: '#fff' }}
                   background
                   dataKey="value"
+                  cornerRadius={5}
                 />
-                <Legend iconSize={10} layout="vertical" verticalAlign="middle" wrapperStyle={{ fontSize: '12px', fontFamily: 'Inter', fontWeight: 600 }} />
-                <Tooltip />
+                <Legend 
+                  iconSize={8} 
+                  layout="vertical" 
+                  verticalAlign="middle" 
+                  align="right"
+                  wrapperStyle={{ fontSize: '11px', fontFamily: 'Inter', fontWeight: 600, lineHeight: '20px' }} 
+                />
+                <Tooltip 
+                  contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }}
+                  itemStyle={{ fontSize: '12px', fontWeight: 500 }}
+                />
               </RadialBarChart>
             </ResponsiveContainer>
           </div>
